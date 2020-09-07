@@ -1,0 +1,65 @@
+<div style="text-align:center" class="content" fxLayout="row" fxLayoutGap="26px">
+    <mat-card fxFlex="25%">
+        <h1>Tacoloco Menu</h1>
+        <h2>Veggie Taco</h2>
+        <h3>$2.50</h3>
+        <h2>Chicken / Beef Taco</h2>
+        <h3>$3.00</h3>
+        <h2>Chorizo Taco</h2>
+        <h3>$3.50</h3>
+    </mat-card>
+    <mat-card fxFlex="25%">
+        <form class="material-form" autocomplete="off" fxLayout="column" fxLayoutGap="12px" (ngSubmit)="submit()">
+            <h1>Order</h1>
+            <mat-form-field class="full-width">
+                <mat-label>Veggie Taco ($2.50)</mat-label>
+                <input
+                matInput
+                [required]="true"
+                mask="0*"
+                [formControl]="this.form.get('veggieTaco')">
+            </mat-form-field>
+            <mat-error *ngIf="this.form.get('veggieTaco').invalid">
+                <span class="errorMessage">Veggie Taco is required.</span>
+            </mat-error>
+            <mat-form-field class="full-width">
+                <mat-label>Chicken Taco ($3.00)</mat-label>
+                <input
+                matInput
+                [required]="true"
+                mask="0*"
+                [formControl]="this.form.get('chickenTaco')">
+            </mat-form-field>
+            <mat-error *ngIf="this.form.get('chickenTaco').invalid">
+                <span class="errorMessage">Chicken Taco is required.</span>
+            </mat-error>
+            <mat-form-field class="full-width">
+                <mat-label>Beef Taco ($3.00)</mat-label>
+                <input
+                matInput
+                [required]="true"
+                mask="0*"
+                [formControl]="this.form.get('beefTaco')">
+            </mat-form-field>
+            <mat-error *ngIf="this.form.get('beefTaco').invalid">
+                <span class="errorMessage">Beef Taco is required.</span>
+            </mat-error>
+            <mat-form-field class="full-width">
+                <mat-label>Chorizo Taco ($3.50)</mat-label>
+                <input
+                matInput
+                [required]="true"
+                mask="0*"
+                [formControl]="this.form.get('chorizoTaco')">
+            </mat-form-field>
+            <mat-error *ngIf="this.form.get('chorizoTaco').invalid">
+                <span class="errorMessage">Chorizo Taco is required.</span>
+            </mat-error>
+        </form>
+    <button mat-raised-button color="primary" (click)="submit()">Submit</button>
+    </mat-card>
+    <mat-card fxFlex="25%">
+        <h1>Order Amount</h1>
+        <h2>{{ orderAmount | currency }}</h2>
+    </mat-card>
+</div>
