@@ -7,9 +7,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 // Third Party
-import { FlexLayoutModule } from "@angular/flex-layout";
+import { NgxMaskModule } from 'ngx-mask'
 
 // Modules
 import { AppRoutingModule } from './app-routing.module';
@@ -31,7 +32,8 @@ import { AppComponent } from './app.component';
     MatInputModule,
     MatCardModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxMaskModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

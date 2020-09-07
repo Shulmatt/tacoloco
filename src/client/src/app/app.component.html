@@ -16,6 +16,7 @@
                 <input
                 matInput
                 [required]="true"
+                mask="0*"
                 [formControl]="this.form.get('veggieTaco')">
             </mat-form-field>
             <mat-error *ngIf="this.form.get('veggieTaco').invalid">
@@ -26,6 +27,7 @@
                 <input
                 matInput
                 [required]="true"
+                mask="0*"
                 [formControl]="this.form.get('chickenTaco')">
             </mat-form-field>
             <mat-error *ngIf="this.form.get('chickenTaco').invalid">
@@ -36,6 +38,7 @@
                 <input
                 matInput
                 [required]="true"
+                mask="0*"
                 [formControl]="this.form.get('beefTaco')">
             </mat-form-field>
             <mat-error *ngIf="this.form.get('beefTaco').invalid">
@@ -46,6 +49,7 @@
                 <input
                 matInput
                 [required]="true"
+                mask="0*"
                 [formControl]="this.form.get('chorizoTaco')">
             </mat-form-field>
             <mat-error *ngIf="this.form.get('chorizoTaco').invalid">
