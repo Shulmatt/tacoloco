@@ -4,5 +4,5 @@ public class Order {
     public int veggieTaco;
     public int chickenTaco;
     public int beefTaco;
-    public int chorizoTaco;    
+    public int chorizoTaco;
 }

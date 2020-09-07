@@ -11,11 +11,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 public class TacosControllerTests {
 
-	@Autowired
-	private TacosController controller;
+    @Autowired
+    private TacosController controller;
 
-	@Test
-	public void contexLoads() throws Exception {
-		assertThat(controller).isNotNull();
-	}
+    @Test
+    public void contexLoads() throws Exception {
+        assertThat(controller).isNotNull();
+    }
 }

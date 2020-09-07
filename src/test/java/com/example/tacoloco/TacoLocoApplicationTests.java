@@ -9,5 +9,4 @@ class TacoLocoApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }

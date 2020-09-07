@@ -15,8 +15,8 @@ public class OrderServiceTests {
     private OrderService orderService;
 
     @Test
-	public void contexLoads() throws Exception {
-		assertThat(orderService).isNotNull();
+    public void contexLoads() throws Exception {
+        assertThat(orderService).isNotNull();
     }
 
     @Test
@@ -42,7 +42,7 @@ public class OrderServiceTests {
     }
 
     @Test
-	public void handlesException() throws Exception {
-		assertThat(orderService.Calculate(null)).isEqualTo(0);
-	}
+    public void handlesException() throws Exception {
+        assertThat(orderService.Calculate(null)).isEqualTo(0);
+    }
 }
